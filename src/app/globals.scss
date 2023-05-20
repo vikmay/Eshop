@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './variables.scss';
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // background: rgb(193, 161, 161)
+}
+body {
+  padding-top: $header-height;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  padding-bottom: calc($header-height + 1%);
+}
+.header_wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  @extend %flex-center;
+  background: #000;
+  z-index:2;
+}
+
+header {
+  width: 80%;
+  height: $header-height;
+  .active {
+    background-color: $btn-color;
+    padding: 0 5px;
+    border-radius: 5px;
+  }
+
+  h1 {
+    color: $primary-text-color;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 0;
+
+    .active {
+      background-color: $btn-color;
+      padding: 0 5px;
+      border-radius: 5px;
+    }
+  }
+
+
+  ul {
+    text-decoration: none;
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      color: $primary-text-color;
+    }
+  }
+}
+
+
+
+.react-icons {
+  color: $primary-text-color;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  size: 3rem;
+}
+
+.swiper {
+  border-radius: 10px;
+  img {
+  
+    height: 400px;
+    border-radius: 10px;
+  }
+}
+
+.swiper-custom-pagination {
+  @extend %flex-center;
+  margin-top: 2%;
+  color: #000;
+  gap: 2%;
+
+  .swiper-pagination-bullet {
+    background: #000;
+    width: 1.111vw;
+    height: 1.111vw;
+  }
+}
+
+
+footer {
+  @extend %flex-center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: $header-height;
+  background: #000;
+  color: $primary-text-color;
+};

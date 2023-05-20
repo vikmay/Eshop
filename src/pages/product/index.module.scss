@@ -1,0 +1,10 @@
+@import '@/app/variables.scss';
+
+
+.btncolor {
+    background-color: $btn-color;
+
+    &:hover {
+        background-color: $btn-hover;
+    }
+} 

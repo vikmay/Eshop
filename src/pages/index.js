@@ -1,42 +1,57 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Swiper, SwiperSlide } from "swiper/react";
-import styles from "@/styles/Home.module.css";
-// custom components
-import Test from "@/components/test/test";
-// image
-import photo from "@/assets/img/pexels.jpeg";
+import { Autoplay, Pagination } from "swiper";
+import s from "@/app/Home.module.css";
+import "swiper/css/pagination";
+import Products from "@/components/products";
 
-const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+
+
+ const Home=() => {
+  
   return (
     <>
-      {/* <Test text="hello world" /> */}
-      <Test>
-        <p>Test</p>
-        <ul>
-          <li>Test</li>
-          <li>Test</li>
-          <li>Test</li>
-        </ul>
-      </Test>
-      {/* image */}
-      <Image src={photo} width={200} height={200} />
+    
       {/* swiper */}
-      <div>
+
+      <div className="my-6">
+
         <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-        </Swiper>
-      </div>
+          spaceBetween={10}
+          centeredSlides={true}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true, el: '.swiper-custom-pagination'
+          }}
+          modules={[Autoplay, Pagination]}
+          className="mySwiper custom-swiper-container">
+
+          <SwiperSlide className={s.swiper_slide}>
+            <img className="w-full" src=".././Hero_pic.jpg"></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="w-full" src="../../Hero_pic.jpg"></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="w-full" src="../../Hero_pic.jpg"></img>
+          </SwiperSlide>
+          <div className={s.main_title}>
+            <div className={s.title_wrapper}>
+              <span className={s.title1}>SHOP</span>
+              <span className={s.title2}>CLOTHING</span>
+              <span className={s.title3}>HERE</span>
+            </div>
+          </div>
+        </ Swiper>
+        <div className="swiper-custom-pagination" /></div>
+
+        <Products className='grid grid-cols-4' limit={4} columns={4} />
     </>
   );
 }
+export default Home

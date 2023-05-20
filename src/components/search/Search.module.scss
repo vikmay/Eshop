@@ -1,0 +1,127 @@
+@import '@/app/variables.scss';
+
+.search {
+
+    margin-right: 15%;
+}
+
+.search_input {
+    min-width: 20vw;
+    height: calc($font-size + 1em);
+    background-image: url(../../assets/img/Search.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 5px;
+    background-size: 1rem;
+    padding-left: 25px;
+    padding-right: 0.2em;
+    outline: none;
+    border: none;
+    border-top-left-radius: $btn-radius;
+    border-bottom-left-radius: $btn-radius;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+
+
+}
+
+.search_button {
+    height: calc($font-size + 1em);
+    background: $btn-color;
+    color: $primary-text-color;
+    border: none;
+    padding: 0 0.8em;
+    border-top-right-radius: $btn-radius;
+    border-bottom-right-radius: $btn-radius;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+
+    line-height: 16px;
+
+    &:hover {
+        background: $btn-hover;
+    }
+
+}
+
+.dropdown {
+    position: absolute;
+    max-height: 75vh;
+    /* Adjust as needed */
+    overflow-y: auto;
+
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.search_input_wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.closeButton {
+    position: absolute;
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    /* ...other styles... */
+}
+
+.noResults {
+    padding: 10px;
+    text-align: center;
+    color: red;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.btncolor {
+    background: $btn-color;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgb(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .dropdown {
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 80vw;
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+  }
+  
+  .search_input_wrapper {
+    position: relative;
+  }

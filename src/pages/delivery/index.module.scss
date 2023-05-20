@@ -1,0 +1,27 @@
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn {
+    width: 50%;
+    background: red;
+    padding: 3%;
+    border-radius: 124px 0px;
+    color: yellow;
+    font-size: xx-large;
+    font-style: italic;
+
+    &.active {
+        animation: pulse 0.5s infinite;
+    }
+}

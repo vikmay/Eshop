@@ -1,0 +1,11 @@
+@import '@/app/variables.scss';
+
+.btncolor {
+    width: 100%;
+    background-color: $btn-color;
+    color: $primary-text-color;
+    padding: $font-size;
+    border-radius: $btn-radius;
+    padding: 0.8em 2em;
+    
+}

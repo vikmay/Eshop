@@ -1,0 +1,15 @@
+.menu_wrapper>* {
+    width: min-content;
+    white-space: nowrap;
+    position: fixed;
+}
+
+.menu_title {
+    display: flex;
+    border-bottom: 1px solid #000;
+    margin-bottom: 4%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+}

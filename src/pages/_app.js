@@ -1,14 +1,18 @@
-import "@/styles/globals.css";
+import "@/app/globals.scss";
 // libs styles
 import "swiper/css";
-import "bootstrap/dist/css/bootstrap.min.css";
 // layouts components
 import Layouts from "@/layouts";
+import Provider from "@/components/providers";
 
-export default function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
-    <Layouts>
-      <Component {...pageProps} />
-    </Layouts>
+    <Provider>
+      <Layouts>
+        <Component {...pageProps} />
+      </Layouts>
+    </Provider>
   );
 }
+
+export default MyApp;
